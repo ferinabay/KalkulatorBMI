@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="47dp"
+        android:text="BMI Calculator"
+        android:textSize="30sp"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/pilihGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_title"
+        >
+
+        <RadioButton
+            android:id="@+id/pilihMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/male"
+            android:paddingTop="50dp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:textColor="@color/colorWhite" />
+
+        <RadioButton
+            android:id="@+id/pilihFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/female"
+            android:button="@android:color/transparent"
+            android:textColor="@color/colorWhite" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="280dp"
+        android:gravity="center_horizontal"
+        android:text="kg lb"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:id="@+id/tambahBerat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginRight="20dp"
+        android:onClick="tmbBerat"
+        android:text="@string/logo_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/plusbtn"
+        />
+
+    <EditText
+        android:id="@+id/inputBerat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/kurangBerat"
+        app:layout_constraintStart_toEndOf="@id/kurangBerat"
+        app:layout_constraintTop_toTopOf="@id/kurangBerat"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/kurangBerat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="280dp"
+        android:onClick="krgBerat"
+        android:text="@string/logo_minus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/minusbtn"
+         />
+
+    <TextView
+        android:id="@+id/label_Tinggi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="350dp"
+        android:gravity="center_horizontal"
+        android:text="cm ft"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <Button
+        android:id="@+id/kurangTinggi"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="350dp"
+        android:onClick="krgTinggi"
+        android:text="@string/logo_minus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/minusbtn"
+         />
+
+    <EditText
+        android:id="@+id/inputTinggi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/kurangTinggi"
+        app:layout_constraintStart_toEndOf="@id/kurangTinggi"
+        app:layout_constraintTop_toTopOf="@id/kurangTinggi"
+        app:layout_constraintVertical_bias="0.428"
+         />
+
+    <Button
+        android:id="@+id/tambahTinggi"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginRight="20dp"
+        android:onClick="tmbTinggi"
+        android:text="@string/logo_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/plusbtn"
+         />
+
+    <TextView
+        android:id="@+id/labelUmur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="420dp"
+        android:gravity="center_horizontal"
+        android:text="age"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <Button
+        android:id="@+id/tambahUmur"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginRight="20dp"
+        android:onClick="tmbUmur"
+        android:text="@string/logo_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/plusbtn"
+         />
+
+    <Button
+        android:id="@+id/kurangUmur"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="420dp"
+        android:onClick="krgUmur"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/minusbtn"
+         />
+
+    <EditText
+        android:id="@+id/inputUmur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/kurangUmur"
+        app:layout_constraintStart_toEndOf="@id/kurangUmur"
+        app:layout_constraintTop_toTopOf="@id/kurangUmur"
+         />
+
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="504dp"
+        android:onClick="calculateBMI"
+        android:textSize="24sp"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/calculate_btn"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
